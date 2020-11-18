@@ -846,7 +846,8 @@
             success: function (data) {
                 spinner.hide();
                 toastr.success(data.message);
-                $("#quantity"+index).val(error.responseJSON.quantity).blur();
+                data.quantity && $("#quantity"+index).val(data.quantity);
+                $("#quantity"+index).blur();
             },
             error: function (error) {
                 spinner.hide();
