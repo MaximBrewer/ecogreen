@@ -158,12 +158,12 @@ class CartController extends Controller
             ],
             'price' => $price,
             'attributes' => array(
-                'packing' => $quantity > $pack_qty ? $pack_qty : $packing,
+                'packing' => $quantity > $pack_qty ? $pack_qty : $quantity,
                 'nds' => $nds,
             ),
         ]);
         session()->flash('message', __('Количество товара обновлено!'));
-        return response()->json(['success' => true, 'message' => __('Количество товара обновлено!'), 'quantity' => $quantity > $pack_qty ? $pack_qty : $packing]);
+        return response()->json(['success' => true, 'message' => __('Количество товара обновлено!'), 'quantity' => $quantity > $pack_qty ? $pack_qty : $quantity]);
     }
 
     /**
