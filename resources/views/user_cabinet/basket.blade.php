@@ -121,8 +121,8 @@
                 </div>
                 <button
                 id="checkoutModalToggle"
-                data-toggle="modal" data-target="confirmCheckoutModal"
-                   class="main-button main-button_yellow basket__info-product-button main-button_yellow-disabled">Оформить
+                data-toggle="modal" data-target="#confirmCheckoutModal"
+                   class="not-button main-button main-button_yellow basket__info-product-button main-button_yellow-disabled">Оформить
                     заказ</button>
             </div>
         </div>
