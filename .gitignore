@@ -1,5 +1,6 @@
 
 /.local
+/ecogreen.beget.tech.error.log
 /node_modules
 /public/hot
 /public/storage
@@ -17,7 +18,6 @@ yarn-error.log
 /resources/views/vendor/jsvalidation
 /public/vendor/
 /.ssh
-/ecogreen.beget.tech.error.log
 /.cache
 /.composer
 /.config
