@@ -154,11 +154,11 @@ class CartController extends Controller
         \Cart::session(auth()->user()->id)->update($id, [
             'quantity' => [
                 'relative' => false,
-                'value' => $quantity,
+                'value' => $quantity > $pack_qty ? $pack_qty : $quantity,
             ],
             'price' => $price,
             'attributes' => array(
-                'packing' => $quantity > $pack_qty ? $pack_qty : $quantity,
+                'packing' => $packing,
                 'nds' => $nds,
             ),
         ]);
