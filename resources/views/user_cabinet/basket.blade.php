@@ -151,7 +151,7 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', !$(this).prop('checked'))">
+                        <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', !$(this).prop('checked'));if($(this).prop('checked')) $('#confirmCheckoutModalSubmit').removeClass('main-button_yellow-disabled') else $('#confirmCheckoutModalSubmit').addClass('main-button_yellow-disabled');">
                         <label class="form-check-label" for="confirmCheck">* Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки персональных данных, публичной офертой, политикой конфиденциальности и правилами продажи. Нельзя оформить заказ до постановки галочки в окошке подтверждения ознакомления с указанными документами</label>
                     </div>
                     <div class="form-check">
@@ -162,7 +162,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                <button type="button" id="confirmCheckoutModalSubmit" disabled class="not-button main-button main-button_yellow" style="padding: .375rem .75rem;
+                <button type="button" id="confirmCheckoutModalSubmit" disabled class="main-button_yellow-disabled not-button main-button main-button_yellow" style="padding: .375rem .75rem;
                 font-size: 1rem;
                 line-height: 1.5;
                 width: auto;
