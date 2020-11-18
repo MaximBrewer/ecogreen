@@ -120,7 +120,7 @@
                     </ul>
                 </div>
                 <a href="#"
-                   id="makeOrder"
+                data-toggle="model" date-target="confirmCheckoutModal"
                    class="main-button main-button_yellow basket__info-product-button main-button_yellow-disabled">Оформить
                     заказ</a>
             </div>
@@ -135,6 +135,41 @@
             <hr>
         @endif
     </div>
+
+  <!-- Modal -->
+
+<div class="modal fade" id="confirmCheckoutModal" tabindex="-2" role="dialog" aria-labelledby="confirmCheckoutLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmCheckoutLabel">Оформление заказа</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', $(this).props('checked'))">
+                        <label class="form-check-label" for="confirmCheck">* Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки персональных данных, публичной офертой, политикой конфиденциальности и правилами продажи. Нельзя оформить заказ до постановки галочки в окошке подтверждения ознакомления с указанными документами</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="confirmMailCheck">
+                        <label class="form-check-label" for="confirmMailCheck">* Выражаю согласие на направление на адрес электронной почты рекламы, коммерческих предложений и т.п.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" id="confirmCheckoutModalSubmit" disabled class="not-button main-button main-button_yellow" style="padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                width: auto;
+                border: 1px solid transparent;" onclick="makeOrder">Оформить</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 @section('java___script')
 
@@ -215,8 +250,8 @@
             // }
             // return ArrFile;
         }
-        $('#makeOrder').on('click',function (e) {
-            e.preventDefault();
+
+        function makeOrder(){
             spinner.show();
             var del_method = $('.basket__delivery').data("selected");
             var delivery = {'del_method': del_method};
@@ -265,6 +300,6 @@
                     window.location.reload();
                 }
             });
-        })
+        }
     </script>
 @endsection
