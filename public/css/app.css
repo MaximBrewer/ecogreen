@@ -3058,6 +3058,12 @@ input::-webkit-inner-spin-button {
   line-height: 22px;
 }
 
+@media (max-width: 768px) {
+  .product__info-block__text {
+    margin-bottom: 14px;
+  }
+}
+
 .product__img {
   background-repeat: no-repeat !important;
   background-position-x: -2419px !important;
