@@ -1,4 +1,7 @@
 @extends('layouts.site')
+@php
+    $dollarRate = \TCG\Voyager\Models\Setting::where('key', 'shop.dollar.rate')->first()->value;
+@endphp
 
 @section('content')
     <div class="main_page">
@@ -27,7 +30,10 @@
                                 Производитель: <span class="fw-600">{{$item->getBrand->name}}</span></div>
                             <div class="d-flex justify-content-between align-items-baseline">
                                 <div class="catalog__cards-card-price">
-                                    <div class="catalog__cards-card-price__foreign">$530</div>
+                                    @php
+                                        $dollarPrice = \App\Services\HelperService::presentPrice($item->price /$dollarRate);
+                                    @endphp
+                                    <div class="catalog__cards-card-price__foreign">${{$dollarPrice}}</div>
                                     ₽ {{$item->price}}
                                 </div>
                                     <a class="main-button_to-stock" data-id="{{$item->id}}">
@@ -78,7 +84,10 @@
                                 Производитель: <span class="fw-600">{{$item->getBrand->name}}</span></div>
                             <div class="d-flex justify-content-between align-items-baseline">
                                 <div class="catalog__cards-card-price">
-                                    <div class="catalog__cards-card-price__foreign">$530</div>
+                                    @php
+                                        $dollarPrice = \App\Services\HelperService::presentPrice($item->price /$dollarRate);
+                                    @endphp
+                                    <div class="catalog__cards-card-price__foreign">${{$dollarPrice}}</div>
                                     ₽ {{$item->price}}
                                 </div>
                                     <a class="main-button_to-stock" data-id="{{$item->id}}">

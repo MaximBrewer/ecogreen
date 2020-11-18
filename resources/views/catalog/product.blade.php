@@ -1,4 +1,7 @@
 @extends('layouts.site')
+@php
+    $dollarRate = \TCG\Voyager\Models\Setting::where('key', 'shop.dollar.rate')->first()->value;
+@endphp
 
 @section('content')
     <div class="container">
@@ -15,7 +18,10 @@
                         <div class="product__info-block__price">
                             <p>Цена рекомендованная</p>
                             <span>
-                                <div class="product__info-block__price__foreign">$530</div>
+                                @php
+                                    $dollarPrice = \App\Services\HelperService::presentPrice($oneItem->price /$dollarRate);
+                                @endphp
+                                <div class="product__info-block__price__foreign">${{$dollarPrice}}</div>
                                 {{\App\Services\HelperService::presentPrice($oneItem->price)}} руб.
                             </span>
                         </div>
@@ -147,7 +153,8 @@
                                 </table>
                             </li>
                             <li>
-                                <table class="grey-container">
+                                <div  class="grey-container">
+                                <table>
                                     <tr>
                                         <th>
                                             Норма
@@ -189,6 +196,7 @@
                                         </tr>
                                     @endforeach
                                 </table>
+                            </div>
                             </li>
                             <li>
                                 <div class="grey-container">

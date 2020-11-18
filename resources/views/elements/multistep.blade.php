@@ -847,6 +847,7 @@
                 spinner.hide();
                 toastr.success(data.message);
                 data.quantity && $("#quantity"+index).val(data.quantity);
+                window.location.reload();
                 $("#quantity"+index).blur();
             },
             error: function (error) {
@@ -885,6 +886,7 @@
                 spinner.hide();
                 toastr.success(data.message);
                 data.quantity && $("#quantity"+index).val(data.quantity);
+                window.location.reload();
                 $("#quantity"+index).blur();
             },
             error: function (error) {

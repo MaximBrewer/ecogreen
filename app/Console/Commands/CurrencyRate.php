@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use TCG\Voyager\Models\Setting;
 
 class CurrencyRate extends Command
 {
@@ -11,7 +12,7 @@ class CurrencyRate extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'currency:rate';
 
     /**
      * The console command description.
@@ -37,6 +38,18 @@ class CurrencyRate extends Command
      */
     public function handle()
     {
+        $xml = simplexml_load_file("http://www.cbr.ru/scripts/XML_daily.asp?date_req=" . date("d/m/Y"));
+
+        // var_dump($xml);
+        // die;
+        foreach($xml->Valute as $valute){
+            if($valute['ID'] == "R01235"){
+                $rate = (string)$valute->Value;
+            }
+        }
+        if($rate){
+            Setting::where('key', 'shop.dollar.rate')->first()->update(['value' => str_replace(",",".",$rate)]);
+        }
         return 0;
     }
 }

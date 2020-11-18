@@ -47,7 +47,7 @@
                                     <td width="350px">
                                         <div class="btn-group" role="group" aria-label="Button group">
 {{--                                            <a class="btn btn-sm btn-primary float-left" style="margin:3px;" href="{{route('order.items.show', $value->id)}}"><i class="voyager-eye"></i>Посмотреть</a>--}}
-                                            <a class="btn btn-sm btn-warning float-left " style="margin:3px;" href="{{route('order.items.edit', $id)}}"><i class="voyager-edit"></i>Редактировать</a>
+                                            <a class="btn btn-sm btn-warning float-left " style="margin:3px;" href="{{route('order.items.edit', $value->id)}}"><i class="voyager-edit"></i>Редактировать</a>
                                             <a class="dropdown-item delete-btn btn btn-danger btn-sm" href="#" style="margin:3px;" data-url="{{route('order.items.destroy',['destroy_id'=>$value->id,'order_id'=>$id])}}"><i class="voyager-trash"></i> @lang('Удалять')</a>
                                         </div>
                                     </td>

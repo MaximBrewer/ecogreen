@@ -33,7 +33,8 @@ class OrderItemsController extends Controller
     {
         $array=[];
         $products = Product::all();
-        return view('order_items.edit-add',compact('order_id','array','products'));
+        $product = $products[0];
+        return view('order_items.edit-add',compact('order_id','array','products', 'product'));
     }
 
     /**
@@ -145,11 +146,13 @@ class OrderItemsController extends Controller
     public function edit($id)
     {
 //        $array=OrderItems::findOrFail($id);
-        $array = OrderItems::where('order_id',$id)->first();
+
+        $array = OrderItems::findOrFail($id);
         $order_id=$array->order_id;
         $products = Product::all();
+        $product = Product::find($array->product_id);
 
-        return view('order_items.edit-add',compact('array','order_id','products'));
+        return view('order_items.edit-add',compact('array','order_id','products','product'));
     }
 
     /**
@@ -161,22 +164,24 @@ class OrderItemsController extends Controller
      */
     public function update(Request $request, $id)
     {
-//        $order_id = $request->order_id;
-//        $product = Product::findOrFail($request->product_id);
-//
-//        $quantity = $request->quantity;
-//        $packing = intval($request->packing);
-//
-//        $price = $product->price * $packing;
-//        $nds = HelperService::NdsPrice($price * $quantity);
+    //    $order_id = $request->order_id;
+    //    $product = Product::findOrFail($request->product_id);
+
+    //    $quantity = $request->quantity;
+    //    $packing = intval($request->packing);
+
+    //    $price = $product->price * $packing;
+    //    $nds = HelperService::NdsPrice($price * $quantity);
 
         OrderItems::findOrFail($id)->update([
             'red_line' => ($request->red_line == "on")?1:0,
+            'packing' => $request->packing,
+            'quantity' => $request->quantity
         ]);
 
         return redirect()->route('order.items.index',['id'=>$request->order_id])->with(
             [
-                'message'=>__('Зачеркивание товара обновлено!'),
+                'message'=>__('Товара обновлен!'),
                 'alert-type'=>'success'
             ]
         );
