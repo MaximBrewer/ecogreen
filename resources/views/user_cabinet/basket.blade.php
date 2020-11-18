@@ -151,7 +151,7 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', $(this).prop('checked'))">
+                        <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', !$(this).prop('checked'))">
                         <label class="form-check-label" for="confirmCheck">* Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки персональных данных, публичной офертой, политикой конфиденциальности и правилами продажи. Нельзя оформить заказ до постановки галочки в окошке подтверждения ознакомления с указанными документами</label>
                     </div>
                     <div class="form-check">
