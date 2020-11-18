@@ -163,7 +163,7 @@ class CartController extends Controller
             ),
         ]);
         session()->flash('message', __('Количество товара обновлено!'));
-        return response()->json(['success' => true, 'message' => __('Количество товара обновлено!')]);
+        return response()->json(['success' => true, 'message' => __('Количество товара обновлено!'), 'quantity' => $quantity > $pack_qty ? $pack_qty : $packing]);
     }
 
     /**
