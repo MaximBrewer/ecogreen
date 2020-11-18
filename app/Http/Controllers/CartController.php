@@ -148,11 +148,6 @@ class CartController extends Controller
         
         $pack_qty = $pack_have_or_not->quantity;
 
-        if ($quantity > $pack_qty) {
-            session()->flash('errors', collect([__('В настоящее время у нас недостаточно товаров на складе.')]));
-            return response()->json(['success' => false, 'message' => __('В настоящее время у нас недостаточно товаров на складе.'), 'quantity' => $pack_qty], 400);
-        }
-
         $price = $product->price * $packing;
         $nds = HelperService::NdsPrice($price * $quantity);
 
@@ -163,7 +158,7 @@ class CartController extends Controller
             ],
             'price' => $price,
             'attributes' => array(
-                'packing' => $packing,
+                'packing' => $quantity > $pack_qty ? $pack_qty : $packing,
                 'nds' => $nds,
             ),
         ]);
