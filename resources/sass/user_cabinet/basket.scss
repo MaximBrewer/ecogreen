@@ -52,125 +52,126 @@
     }
 
     &__payment {
-        &-inner {
+        &>div {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 15px;
 
-            &-item {
-                box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
-                border-radius: 12px;
-                padding: 21px;
-                color: $main_grey;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border: 2px solid $white;
+            @media (max-width: 991px) {
+                display: block;
+            }
+        }
 
-                &-text {
-                    text-align: left;
+        &-item {
+            box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
+            border-radius: 12px;
+            padding: 21px;
+            color: $main_grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid $white;
+
+            &-text {
+                text-align: left;
+                position: relative;
+
+                div {
                     position: relative;
+                    width: max-content;
 
-                    div {
-                        position: relative;
-                        width: max-content;
+                    span {
+                        position: absolute;
+                        right: -8px;
+                        top: -5px;
+                        font-weight: 900;
+                        font-size: 12px;
 
-                        span {
-                            position: absolute;
-                            right: -8px;
-                            top: -5px;
-                            font-weight: 900;
-                            font-size: 12px;
-
-                            &:hover {
-                                cursor: pointer;
-                            }
+                        &:hover {
+                            cursor: pointer;
                         }
                     }
-
-                    p {
-                        margin-top: 8px;
-                        font-size: 24px;
-                    }
                 }
 
-                &-circle {}
-
-                &:hover {
-                    cursor: pointer;
-                    border: 2px solid $main_orange-focus;
-                }
-
-                &-active {
-                    border: 2px solid $main_orange !important;
+                p {
+                    margin-top: 8px;
+                    font-size: 24px;
                 }
             }
 
-            @media (max-width: 991px) {
-                display: block;
+            &-circle {}
+
+            &:hover {
+                cursor: pointer;
+                border: 2px solid $main_orange-focus;
+            }
+
+            &-active {
+                border: 2px solid $main_orange !important;
             }
         }
     }
 
     &__delivery {
-        &-inner {
+        &>div {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 15px;
-
-            &-item {
-                box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
-                border-radius: 12px;
-                padding: 21px;
-                color: $main_grey;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border: 2px solid $white;
-
-                &-text {
-                    text-align: left;
-                    position: relative;
-
-                    div {
-                        position: relative;
-                        width: max-content;
-
-                        span {
-                            position: absolute;
-                            right: -8px;
-                            top: -5px;
-                            font-weight: 900;
-                            font-size: 12px;
-
-                            &:hover {
-                                cursor: pointer;
-                            }
-                        }
-                    }
-
-                    p {
-                        margin-top: 8px;
-                        font-size: 24px;
-                    }
-                }
-
-                &-circle {}
-
-                &:hover {
-                    cursor: pointer;
-                    border: 2px solid $main_orange-focus;
-                }
-
-                &-active {
-                    border: 2px solid $main_orange !important;
-                }
-            }
 
             @media (max-width: 991px) {
                 display: block;
             }
         }
+
+        &-item {
+            box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
+            border-radius: 12px;
+            padding: 21px;
+            color: $main_grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid $white;
+
+            &-text {
+                text-align: left;
+                position: relative;
+
+                div {
+                    position: relative;
+                    width: max-content;
+
+                    span {
+                        position: absolute;
+                        right: -8px;
+                        top: -5px;
+                        font-weight: 900;
+                        font-size: 12px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 8px;
+                    font-size: 24px;
+                }
+            }
+
+            &-circle {}
+
+            &:hover {
+                cursor: pointer;
+                border: 2px solid $main_orange-focus;
+            }
+
+            &-active {
+                border: 2px solid $main_orange !important;
+            }
+        }
+
     }
 }
 
