@@ -884,6 +884,7 @@
             success: function (data) {
                 spinner.hide();
                 toastr.success(data.message);
+                data.quantity && $("#quantity"+index).val(data.quantity);
                 $("#quantity"+index).blur();
             },
             error: function (error) {
