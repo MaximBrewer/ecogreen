@@ -152,7 +152,7 @@
                 <div class="container">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="confirmCheck" onchange="$('#confirmCheckoutModalSubmit').attr('disabled', !$(this).prop('checked'));if($(this).prop('checked')) $('#confirmCheckoutModalSubmit').removeClass('main-button_yellow-disabled'); else $('#confirmCheckoutModalSubmit').addClass('main-button_yellow-disabled');">
-                        <label class="form-check-label" for="confirmCheck">* Настоящим подтверждаю, что я ознакомлен и согласен с 
+                        <label class="form-check-label" for="confirmCheck">Настоящим подтверждаю, что я ознакомлен и согласен с 
                             <a target="_blank" href="/sooglasheniye">условиями политики обработки персональных данных</a>, 
                             <a target="_blank" href="/public_offerta">публичной офертой</a>, 
                                 <a target="_blank" href="/conf_politics">политикой конфиденциальности </a>
@@ -161,7 +161,7 @@
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="confirmMailCheck">
-                        <label class="form-check-label" for="confirmMailCheck">* Выражаю согласие на направление на адрес электронной почты рекламы, коммерческих предложений и т.п.</label>
+                        <label class="form-check-label" for="confirmMailCheck">Выражаю согласие на направление на адрес электронной почты рекламы, коммерческих предложений и т.п.</label>
                     </div>
                 </div>
             </div>
