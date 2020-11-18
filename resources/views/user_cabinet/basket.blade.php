@@ -119,10 +119,11 @@
                         <li>Оплата</li>
                     </ul>
                 </div>
-                <a href="#"
-                data-toggle="model" date-target="confirmCheckoutModal"
+                <button
+                id="checkoutModalToggle"
+                data-toggle="modal" data-target="confirmCheckoutModal"
                    class="main-button main-button_yellow basket__info-product-button main-button_yellow-disabled">Оформить
-                    заказ</a>
+                    заказ</button>
             </div>
         </div>
         @else

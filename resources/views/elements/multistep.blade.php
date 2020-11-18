@@ -585,7 +585,7 @@
                 //заказ на 4 шаге можем оформить
                 if(indexLi == 4) {
                     $('.multistep-actions').hide();
-                    $('#makeOrder').removeClass('main-button_yellow-disabled');
+                    $('#checkoutModalToggle').removeClass('main-button_yellow-disabled');
                 }
             },
             //this comes from the custom easing plugin
