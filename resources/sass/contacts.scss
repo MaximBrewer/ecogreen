@@ -1,0 +1,80 @@
+.contacts {
+  .contacts-switcher {
+    margin: auto;
+    display: grid;
+    max-width: 600px;
+    box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
+    border-radius: 12px;
+    font-size: 14px;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    &__item {
+      text-align: center;
+      padding: 13px 72px 13px 72px;
+      background: $green_main;
+      color: $white;
+      &:hover {
+        color: $white;
+        cursor: pointer;
+        background: $main_orange_focus_dark;
+      }
+    }
+    .flex-active {
+      background: $main_orange;
+      color: $white;
+    }
+
+      @media (max-width: 400px) {
+        display: block;
+      }
+  }
+  .slides {
+      min-height: 240px;
+  }
+
+    &.slider {
+        overflow: auto;
+    }
+}
+
+.contacts-map {
+  height: 400px;
+  width: 100%;
+  background-size: cover!important;
+  background-position: 75% center!important;
+}
+.contacts-text {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 70px;
+  padding-left: 70px;
+
+    @media (max-width: 1200px) {
+        padding-right: unset;
+        padding-left: unset;
+    }
+
+    @media (max-width: 540px) {
+        display: block;
+    }
+
+  &__item {
+
+    line-height: 22px;
+      padding: 0 20px;
+
+      @media (max-width: 540px) {
+          margin-bottom: 30px;
+      }
+
+    &-title {
+      margin-top: 13px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 26px;
+      color: $main_grey;
+    }
+  }
+}

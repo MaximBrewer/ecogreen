@@ -1,0 +1,74 @@
+.buy-scheme {
+    display: grid;
+    margin: 0 auto 10px;
+    width: 100%;
+    //max-width: 600px;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+		"space-11 line-12 icon-13 line-14 space-15 space-15 space-15 space-15 space-15"
+    "space-21 space-21 text-23 space-24 space-24 space-24 space-24 space-24 space-24"
+    "icon-31 space-32 space-32 space-32 icon-35 line-36 icon-37 line-38 icon-39"
+    "text-41 line-42 space-43 line-44 text-45 space-46 text-47 space-48 text-49"
+
+    "space-51 space-51 icon-53 space-54 space-54 space-54 space-54 space-54 line-59"
+    "space-61 space-62 text-63 space-64 space-64 space-64 space-64 space-64 line-59"
+
+    "space-71 space-71 space-71 space-71 icon-75 line-76 icon-77 line-78 icon-79"
+    "space-81 space-81 space-81 space-81 text-85 space-86 text-87 space-88 text-89";
+    position: relative;
+    top: -40px;
+
+    @media (max-width: 992px) {
+        width: 130%;
+        left: -100px;
+    }
+
+    @media (max-width: 960px) {
+        display: none;
+    }
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__horizontal-line {
+        width: 100%;
+        min-width: 5px;
+        height: 3px;
+        background: #4A785A;
+    }
+
+    &__vertical-line {
+        height: 100%;
+        width: 3px;
+        background: #4A785A;
+    }
+
+    &__ellipse {
+        width: 70px;
+        height: 70px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16);
+        border-radius: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        box-sizing: content-box;
+
+        svg {
+            fill: #4A785A;
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    &__text {
+        align-items: baseline !important;
+        font-size: 13px;
+        line-height: 17px;
+    }
+}

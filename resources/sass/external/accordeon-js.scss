@@ -1,0 +1,81 @@
+/*!
+ * Accordion v2.8.0
+ * Simple accordion created in pure Javascript.
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright 2017-2019 Michał Strumpf
+ * Published under MIT License
+ */
+
+/* Edited special for eco-green */
+
+.ac {
+    //margin-top: 10px;
+    //border: 1px solid #ddd;
+    //background-color: #fff;
+    //box-sizing: border-box;
+    list-style: none;
+    padding: 10px 20px;
+    float: left;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+    font-size: .75em;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ac > .ac-q {
+    //font: bold 15px 'Arial', sans-serif;
+    //color: #111;
+    //padding: 10px 30px 10px 10px;
+    //margin: 0;
+    //text-decoration: none;
+    //display: block;
+    //cursor: pointer;
+    //position: relative;
+}
+
+.ac > .ac-q::after {
+    //content: '+';
+    //text-align: center;
+    //width: 15px;
+    //right: 10px;
+    //top: 50%;
+    //-webkit-transform: translate(0, -50%);
+    //transform: translate(0, -50%);
+    //position: absolute;
+}
+
+.ac > .ac-a {
+    font-weight: normal;
+    overflow: hidden;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.ac > .ac-a p {
+    //font: 14px/1.5 'Arial', sans-serif;
+    //color: #777;
+    //margin: 0;
+    //padding: 10px;
+}
+
+.ac.js-enabled > .ac-a {
+    visibility: hidden;
+}
+
+.ac.is-active > .ac-a {
+    visibility: visible;
+    padding: 20px 0;
+}
+
+.ac.is-active > .ac-q::after {
+    //content: '\2013';
+}

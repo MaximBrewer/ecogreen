@@ -1,0 +1,122 @@
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  padding: 0 17px;
+    @media (max-width: 730px) {
+        grid-template-columns: auto;
+    }
+  &__info {
+    border-right: 1px solid #F1F1F5;
+    margin-bottom: 40px;
+    padding-right: 53px;
+
+      &-wrapper {
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        border: 1px solid #e5e5e5;
+        overflow: hidden;
+        padding: 5px;
+      }
+
+      &-avatar {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+
+          &__actions {
+              margin-top: 20px;
+
+              a {
+                  display: block;
+                  margin-bottom: 10px;
+                  text-align: center;
+                  width: 200px;
+                  padding: 10px;
+                  border-radius: 5px;
+              }
+
+              &__edit {
+                  border: 1px solid #ffc107;
+                  color: #dba604;
+              }
+
+              &__edit:hover {
+                  background: #ffc107;
+                  color: #fff;
+              }
+
+              &__delete {
+                  border: 1px solid #dc3545;
+                  color: #dc3545;
+              }
+
+              &__delete:hover {
+                  background: #dc3545;
+                  color: #fff;
+              }
+          }
+      }
+    hr {
+      //margin-right: 25px;
+    }
+
+      @media (max-width: 730px) {
+          border-right: 0;
+          padding-right: 0;
+      }
+  }
+  &__form {
+    padding-top: 8px;
+    padding-left: 81px;
+    @media (max-width: 1370px) {
+      padding-left: 21px;
+      padding-right: 21px;
+        padding-bottom: 30px;
+    }
+
+      @media (max-width: 730px) {
+          padding-left: 0;
+          padding-right: 0;
+      }
+  }
+  &-accordion {
+    //padding-right: 60px;
+    &__heading-item {
+      font-size: 16px;
+      line-height: 28px;
+      padding-top: 18px;
+      &-link {
+        color: $main_orange!important;
+        padding-bottom: 12px;
+        min-width: 200px;
+        display: inline-block;
+        border-bottom: 1px solid $main_orange;
+
+      }
+      &:hover {
+        color: $main_orange;
+        cursor: pointer;
+      }
+    }
+    &__text-item {
+      line-height: 24px;
+      margin-top: 20px;
+      ul {
+        li {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+.spacer {
+  width: 5px;
+}
+.info-accordion {
+  color: $main_grey;
+  font-size: 14px;
+}

@@ -1,0 +1,40 @@
+@import 'reset';
+//reset css
+// Variables
+@import 'variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+
+@import 'header';
+@import 'global';
+@import 'about_us';
+@import 'contacts';
+@import 'footer';
+@import 'modals/modals';
+@import 'catalog/chemical';
+@import 'catalog/catalog';
+@import 'catalog/product';
+@import 'crop_guide/crop_guide';
+@import 'crop_guide/crop_product';
+@import 'menu/where-search';
+@import 'menu/accordion';
+@import 'main_page';
+@import 'elements/multistep';
+@import 'user_cabinet/login';
+@import 'user_cabinet/register';
+@import 'user_cabinet/basket';
+@import 'user_cabinet/side_menu';
+@import 'user_cabinet/cabinet';
+@import 'user_cabinet/header';
+@import 'user_cabinet/order';
+@import 'user_cabinet/questions';
+@import 'user_cabinet/profile';
+@import 'user_cabinet/docs_add';
+@import 'elements/buy_scheme';
+@import 'elements/mobile_buy_scheme';
+@import 'external/accordeon-js';
+@import 'elements/search';
+
+
+

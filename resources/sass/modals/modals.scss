@@ -1,0 +1,28 @@
+.request-modal {
+  &_black {
+    background-color: $green_main;
+    border-radius: 12px;
+    color: $white;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    input {
+      background-color: $white;
+    }
+  }
+  &__title {
+    font-weight: 600!important;
+    margin-bottom: 31px;
+  }
+  &__button {
+      margin-top: 31px;
+      margin-bottom: 31px;
+  }
+  &__link {
+    color: $white;
+    font-size: 14px;
+    margin-left: 13px;
+    &:hover {
+      color: $main_orange;
+    }
+  }
+}

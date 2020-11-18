@@ -1,0 +1,48 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+//$font-family-sans-serif: 'Noto', sans-serif;
+//$font-size-base: 0.9rem;
+//$line-height-base: 1.6;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+}
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$white: #ffffff;
+
+$green_main: #4A785A;
+$main_grey: #3F3B3B;
+$main_grey2: #F9F9F9;
+$main_grey3: #959393;
+$main_orange: #FF9900;
+$main_orange-focus: rgba(100%, 60%, 0%, .25);
+$main_orange-focus_dark: #ff820e;
+$black: #000000;
+
+.black-text {
+  color: $black;
+}
+.main_grey-text {
+  color: $main_grey;
+}
+.main_green-text {
+  color: $green_main;
+}
+.main_orange-text {
+  color: $main_orange;
+}

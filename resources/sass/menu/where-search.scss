@@ -1,0 +1,31 @@
+.where-search-menu {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  width: 268px;
+  font-size: 14px;
+  .checkbox {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .main-button {
+    margin: auto;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 900;
+  }
+  &__button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 118px;
+  }
+}
+
+.dropdown-where-search {
+  right:  0!important;
+  left: unset!important;
+  margin-top: 10px!important;
+}

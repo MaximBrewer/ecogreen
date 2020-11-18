@@ -1,0 +1,127 @@
+/* MAIN DIV */
+.accordion {
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  background: $white;
+  color: $main_grey;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(96, 97, 112, 0.16);
+}
+.label-container {
+  display: flex;
+  justify-content: space-between;
+}
+  /* accordion TAB */
+  .accordion-tab {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &:first-child {
+      border-radius: 6px;
+
+    }
+  }
+
+  /* accordion TAB A */
+  .accordion-tab a {
+    text-decoration: none;
+  }
+
+  /* accordion TAB CONTENT */
+  .accordion-tab-content {
+    margin-right: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+  }
+
+  /* accordion TAB CONTENT ITEM A */
+  .accordion-tab-content-item  {
+    padding: 16px;
+    transition-duration: .6s;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: solid 1px #EAEAEA;
+  }
+
+  /* accordion TAB CONTENT ITEM A : HOVER */
+  .accordion-tab-content-item:hover {
+    cursor: pointer;
+  }
+
+  /* accordion INPUT */
+  .accordion input {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+  /* accordion LABEL */
+  .accordion label {
+    transition-duration: .6s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .accordion-tab__top-label {
+    padding: 16px;
+  }
+
+  /* accordion LABEL : HOVER*/
+  .accordion label:hover {
+    cursor: pointer;
+  }
+
+  /* accordion INPUT IF CHECKED */
+  .accordion input:checked ~ .accordion-tab-content {
+    max-height: inherit;
+    //height: auto;
+    //overflow-y: auto;
+  }
+
+  /* accordion INPUT IF CHECKED = LABEL #ddc40a */
+  .accordion input:checked ~ .accordion-tab__top-label {
+    color: $white;
+    background-color: $main_orange;
+    //border-bottom: solid 1px blue;
+  }
+
+  /* accordion ICON LABEL */
+  .accordion label::after {
+    //width: 3em;
+    height: 3em;
+    right: 0;
+    top: 0;
+    line-height: 3;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+    position: absolute;
+    display: block;
+    text-align: center;
+  }
+  .accordion-tab {
+      .accordion-tab-cb + label::after {
+          display: block;
+          content: ' ';
+          background-image: url('../../assets/icons/dropdown.svg');
+          background-size: 15px 15px;
+          height: 15px;
+          width: 15px;
+          margin-top: 20px;
+          margin-right: 16px;
+      }
+      .accordion-tab-cb:checked + label::after {
+          transform: rotate(90deg);
+          filter: brightness(10);
+      }
+
+  }
+
+ 

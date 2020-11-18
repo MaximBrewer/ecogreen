@@ -1,0 +1,87 @@
+.subheader_sm_grey {
+  font-weight: bold;
+  font-size: 14px;
+  opacity: .5;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.subheader_sm_black {
+  font-weight: bold;
+  font-size: 24px;
+  color: $black;
+}
+
+
+
+.subheader-desc {
+  font-size: 20px;
+  color: $black;
+}
+
+.about-us-image_top {
+  width: 390px;
+  height: 510px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 60px;
+  margin-bottom: 22px;
+  float: left;
+}
+
+.about-us__top-spacer {
+  height: 107px;
+}
+.team-img {
+  max-width: 620px;
+  max-height: 335px;
+  border-radius: 10px;
+  display: inherit;
+}
+
+.berrie-img {
+    margin-bottom: 30px;
+  width: 368px;
+  height: 368px;
+  float: left;
+  margin-right: 22px;
+  object-fit: cover;
+}
+
+.about-us__arrow-wrapper {
+  max-width: 450px;
+  margin: auto;
+}
+.about-us-swiper {
+  z-index: 20;
+  position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
+  &__sb-prev {
+    left: -80px;
+    width: 50px!important;
+    height: 50px!important;
+  }
+  &__sb-next {
+    right: -80px;
+    width: 50px!important;
+    height: 50px!important;
+  }
+
+    @media (max-width: 640px) {
+        &__sb-prev {
+            left: 0;
+        }
+        &__sb-next {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .about-us-image_top {
+        width: 100%;
+        height: auto;
+    }
+}
