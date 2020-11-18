@@ -1,5 +1,5 @@
 textarea:hover,
-input:hover,
+input:not([type=checkbox]):hover,
 textarea:active,
 input:active,
 textarea:focus,
