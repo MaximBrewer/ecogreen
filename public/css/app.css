@@ -3015,6 +3015,7 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
   font-size: 12px;
   padding-bottom: 15px;
+  white-space: nowrap;
 }
 
 .product__info-block__price__foreign {
@@ -3051,7 +3052,7 @@ input::-webkit-inner-spin-button {
 
 .product__info-block__text {
   margin-top: 10px;
-  margin-bottom: 44px;
+  margin-bottom: 74px;
   color: #959393;
   font-size: 12px;
   line-height: 22px;

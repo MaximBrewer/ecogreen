@@ -60,6 +60,7 @@
       font-weight: bold;
       font-size: 12px;
       padding-bottom: 15px;
+      white-space: nowrap;
 
         &__foreign {
             margin-bottom: 5px;
@@ -91,7 +92,7 @@
     &__text {
 
       margin-top: 10px;
-        margin-bottom: 44px;
+        margin-bottom: 74px;
       color: $main_grey3;
       font-size: 12px;
       line-height: 22px;

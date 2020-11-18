@@ -20,3 +20,4 @@ yarn-error.log
 /.cache
 /.composer
 /.config
+.DS_Store
