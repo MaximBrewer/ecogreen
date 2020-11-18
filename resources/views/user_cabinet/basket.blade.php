@@ -166,7 +166,7 @@
                 font-size: 1rem;
                 line-height: 1.5;
                 width: auto;
-                border: 1px solid transparent;" onclick="makeOrder">Оформить</button>
+                border: 1px solid transparent;" onclick="makeOrder()">Оформить</button>
             </div>
         </div>
     </div>
