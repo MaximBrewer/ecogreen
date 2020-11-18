@@ -503,7 +503,7 @@
     let indexLi = $("fieldset").index(current_fs);
 
     $('.basket__timeline-done').css({
-        'width': (currentBarWidth / 4),
+        'width': (currentBarWidth / 5),
     });
 
     //изменение прогрессбара
@@ -511,7 +511,7 @@
     function changePB(indexLi) {
         currentBarWidth = $('.basket__timeline-line').width();
         $('.basket__timeline-done').css({
-            'width': (currentBarWidth / 4) + (currentBarWidth / 4) * (indexLi),
+            'width': (currentBarWidth / 5) + (currentBarWidth / 5) * (indexLi),
         });
     }
 
