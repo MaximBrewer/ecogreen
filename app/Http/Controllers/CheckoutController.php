@@ -141,6 +141,17 @@ class CheckoutController extends Controller
         }
 
 
+
+        if ((int)$request->pay_method) {
+            $paymethod = null;
+            $payment = OrderPaymentType::find($request->pay_method);
+        } elseif ($request->pay_method) {
+            $paymethod = $request->pay_method;
+            $payment = null;
+        }
+        $delivery = (int)$request->del_method ? OrderShippingType::find($request->del_method) : null;
+
+
         // Insert into orders table
         $order = Orders::create([
             'order_nr' => $request->order_nr,
@@ -152,11 +163,11 @@ class CheckoutController extends Controller
             //            'billing_country' => $user->country,
             'billing_phone' => $billing_phone,
             'notes' => $notes ?? null,
-            'type_credit' => $request->pay_method ?? null, // this is non specific column to write pay_method text
+            'type_credit' => $paymethod ?? null, // this is non specific column to write pay_method text
             'billing_total' => HelperService::getNumbers()->get('total'),
             'billing_nds_total' => HelperService::getNumbers()->get('ndsTotal'),
-            'shipping_type_id' => OrderShippingType::where('default', 1)->value('id'),
-            'payment_type_id' => OrderPaymentType::where('default', 1)->value('id'),
+            'shipping_type_id' => $delivery ? $delivery->id : OrderShippingType::where('default', 1)->value('id'),
+            'payment_type_id' => $payment ? $payment->id : OrderPaymentType::where('default', 1)->value('id'),
             'status_id' => OrderStatus::where('default', 1)->value('id'),
             'error' => $error,
         ]);

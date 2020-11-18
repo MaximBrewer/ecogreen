@@ -19,11 +19,17 @@
                     <li class="active-step basket__timeline-line-tip-container">
                         <span>Товар в корзине</span>
                         <div class="basket__timeline-line-tip">
-                            25%
+                            20%
                         </div>
                     </li>
                     <li class="basket__timeline-line-tip-container">
                         <span>Информация заполнена</span>
+                        <div class="basket__timeline-line-tip">
+                            40%
+                        </div>
+                    </li>
+                    <li class="basket__timeline-line-tip-container">
+                        <span>Оплата</span>
                         <div class="basket__timeline-line-tip">
                             50%
                         </div>
@@ -31,7 +37,7 @@
                     <li class="basket__timeline-line-tip-container">
                         <span>Доставка</span>
                         <div class="basket__timeline-line-tip">
-                            75%
+                            80%
                         </div>
                     </li>
                     <li class="basket__timeline-line-tip-container">
